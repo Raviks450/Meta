@@ -1,3 +1,8 @@
+variable "list_names"{
+type =list
+default = ["WindowsVM","LinuxVM", "UbuntuVM","OracleVM"]
+}
+
 variable "project" {}
 
 variable "region" {
