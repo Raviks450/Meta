@@ -11,7 +11,7 @@ variable "machine_type"{
     default = "n1-standard-1"
 }
 variable "name"{}
-}
+
 variable "image" {
     default = "projects/debian-cloud/global/images/debian-12-bookworm-v20260210"
 }
