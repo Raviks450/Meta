@@ -16,8 +16,8 @@ variable "machine_type"{
     default = "n1-standard-1"
 }
 variable "name"{
-type =list
-default = ["WindowsVM","LinuxVM", "UbuntuVM","OracleVM"]
+type    = list
+default = ["WindowsVM","LinuxVM","UbuntuVM","OracleVM"]
 }
 
 variable "image" {
@@ -29,11 +29,12 @@ variable "network" {
 }
 
 resource "google_compute_instance" "default" {
-  name         = var.name
+  name         = var.name[count.index]
+  count        = 4
   machine_type = var.machine_type
   zone         = var.zone
   project      = var.project
-  count        = 3
+  
 
 
   boot_disk {
