@@ -1,8 +1,3 @@
-variable "list_names"{
-type =list
-default = ["WindowsVM","LinuxVM", "UbuntuVM","OracleVM"]
-}
-
 variable "project" {}
 
 variable "region" {
@@ -17,7 +12,7 @@ variable "machine_type"{
 }
 variable "name"{
 type    = list
-default = ["WindowsVM","LinuxVM","UbuntuVM","OracleVM"]
+default = ["windows","linux","ubuntu","oracle"]
 }
 
 variable "image" {
